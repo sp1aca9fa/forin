@@ -29,20 +29,18 @@ export default function RootLayout({
               </span>
             </Link>
             <nav className="flex gap-5 text-sm text-slate-600 dark:text-slate-400">
-              <Link href="/" className="hover:text-slate-900 dark:hover:text-slate-100 transition-colors">
+              <Link href="/about" className="hover:text-slate-900 dark:hover:text-slate-100 transition-colors">
                 About
               </Link>
               <Link href="/data" className="hover:text-slate-900 dark:hover:text-slate-100 transition-colors">
                 Data
               </Link>
-              <a
-                href="https://forms.gle/placeholder"
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                href="/surveys"
                 className="rounded-full bg-slate-900 dark:bg-slate-100 px-3 py-1 text-xs text-white dark:text-slate-900 hover:bg-slate-700 dark:hover:bg-slate-300 transition-colors"
               >
-                Take the survey
-              </a>
+                Surveys
+              </Link>
             </nav>
           </div>
         </header>
@@ -56,14 +54,9 @@ export default function RootLayout({
               © {new Date().getFullYear()} Forin / Japan Foreign Index. Data is
               aggregated and anonymized — no individual responses are published.
             </p>
-            <a
-              href="https://forms.gle/placeholder"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="underline hover:text-slate-600"
-            >
-              Take the survey
-            </a>
+            <Link href="/surveys" className="underline hover:text-slate-600 dark:hover:text-slate-300">
+              Surveys
+            </Link>
           </div>
         </footer>
       </body>

@@ -18,14 +18,12 @@ export default function Home() {
             sources can&apos;t provide.
           </p>
           <div className="flex flex-wrap gap-3">
-            <a
-              href="https://forms.gle/placeholder"
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              href="/surveys"
               className="rounded-full bg-slate-900 px-6 py-2.5 text-sm font-medium text-white hover:bg-slate-700 transition-colors"
             >
-              Share your experience
-            </a>
+              See our surveys
+            </Link>
             <Link
               href="/data"
               className="rounded-full border border-slate-300 dark:border-slate-600 px-6 py-2.5 text-sm font-medium text-slate-700 dark:text-slate-300 hover:border-slate-500 dark:hover:border-slate-400 transition-colors"
@@ -131,14 +129,12 @@ export default function Home() {
               you know exactly who holds your data.
             </p>
           </div>
-          <a
-            href="https://forms.gle/placeholder"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            href="/surveys"
             className="shrink-0 rounded-full bg-white px-6 py-2.5 text-sm font-medium text-slate-900 hover:bg-slate-100 transition-colors"
           >
-            Take the survey →
-          </a>
+            See our surveys →
+          </Link>
         </div>
       </section>
     </div>
