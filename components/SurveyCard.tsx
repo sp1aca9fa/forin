@@ -35,11 +35,11 @@ export default function SurveyCard({ snapshot }: SurveyCardProps) {
   }
 
   return (
-    <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+    <div className="rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 p-6 shadow-sm">
       {/* Card header */}
       <div className="flex items-start justify-between gap-4 mb-6">
         <div>
-          <h2 className="text-lg font-semibold text-slate-900">
+          <h2 className="text-lg font-semibold text-slate-900 dark:text-slate-100">
             Employment & Salary Survey
           </h2>
           <p className="text-sm text-slate-500 mt-0.5">
@@ -63,8 +63,8 @@ export default function SurveyCard({ snapshot }: SurveyCardProps) {
                 onClick={() => setShowTooltip(false)}
               />
               {/* Tooltip */}
-              <div className="absolute right-0 top-6 z-20 w-72 rounded-xl border border-slate-200 bg-white p-4 shadow-lg text-sm text-slate-600 leading-relaxed">
-                <p className="font-medium text-slate-800 mb-1">
+              <div className="absolute right-0 top-6 z-20 w-72 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 p-4 shadow-lg text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                <p className="font-medium text-slate-800 dark:text-slate-200 mb-1">
                   Data is collected via Google Forms
                 </p>
                 <p>

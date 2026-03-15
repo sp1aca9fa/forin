@@ -26,7 +26,7 @@ export default async function DataPage() {
   return (
     <div className="mx-auto max-w-5xl px-4 py-16">
       <div className="mb-10">
-        <h1 className="text-3xl font-bold text-slate-900 mb-2">Survey data</h1>
+        <h1 className="text-3xl font-bold text-slate-900 dark:text-slate-100 mb-2">Survey data</h1>
         <p className="text-slate-500 text-sm">
           Aggregated from community responses. No individual data is stored or
           published.
@@ -46,7 +46,7 @@ export default async function DataPage() {
 
 function EmptyState() {
   return (
-    <div className="rounded-2xl border border-dashed border-slate-300 bg-white p-12 text-center">
+    <div className="rounded-2xl border border-dashed border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 p-12 text-center">
       <p className="text-slate-500 mb-2">No data synced yet.</p>
       <p className="text-sm text-slate-400 mb-6">
         Once the first survey sync runs, aggregated stats will appear here.

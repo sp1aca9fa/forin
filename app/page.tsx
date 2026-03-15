@@ -9,10 +9,10 @@ export default function Home() {
           <p className="text-xs font-medium uppercase tracking-widest text-slate-400 mb-4">
             Japan Foreign Index
           </p>
-          <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-slate-900 leading-tight mb-6">
+          <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-slate-900 dark:text-slate-100 leading-tight mb-6">
             Real data on life as a foreigner in Japan
           </h1>
-          <p className="text-lg text-slate-600 leading-relaxed mb-10">
+          <p className="text-lg text-slate-600 dark:text-slate-400 leading-relaxed mb-10">
             Community-contributed surveys combined with government statistics — giving
             you an honest picture of employment, salary, and daily life that official
             sources can&apos;t provide.
@@ -28,7 +28,7 @@ export default function Home() {
             </a>
             <Link
               href="/data"
-              className="rounded-full border border-slate-300 px-6 py-2.5 text-sm font-medium text-slate-700 hover:border-slate-500 transition-colors"
+              className="rounded-full border border-slate-300 dark:border-slate-600 px-6 py-2.5 text-sm font-medium text-slate-700 dark:text-slate-300 hover:border-slate-500 dark:hover:border-slate-400 transition-colors"
             >
               View the data
             </Link>
@@ -37,18 +37,18 @@ export default function Home() {
       </section>
 
       {/* Problem */}
-      <section className="py-16 border-t border-slate-200">
+      <section className="py-16 border-t border-slate-200 dark:border-slate-800">
         <div className="grid md:grid-cols-2 gap-12 items-start">
           <div>
-            <h2 className="text-2xl font-bold text-slate-900 mb-4">
+            <h2 className="text-2xl font-bold text-slate-900 dark:text-slate-100 mb-4">
               The data gap
             </h2>
-            <p className="text-slate-600 leading-relaxed mb-4">
+            <p className="text-slate-600 dark:text-slate-400 leading-relaxed mb-4">
               Japan publishes excellent macro statistics on foreign residents — visa
               categories, nationality breakdowns, regional distribution. What it
               doesn&apos;t publish is what it&apos;s actually like to live here.
             </p>
-            <p className="text-slate-600 leading-relaxed">
+            <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
               What&apos;s a realistic salary for a foreigner in tech? How long does
               it take to feel settled? How much does Japanese ability actually matter
               for your career? These questions get answered in expat forums and
@@ -64,10 +64,10 @@ export default function Home() {
             ].map(({ stat, label }) => (
               <div
                 key={label}
-                className="rounded-xl border border-slate-200 bg-white p-4"
+                className="rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 p-4"
               >
-                <p className="text-2xl font-bold text-slate-900">{stat}</p>
-                <p className="text-xs text-slate-500 mt-1">{label}</p>
+                <p className="text-2xl font-bold text-slate-900 dark:text-slate-100">{stat}</p>
+                <p className="text-xs text-slate-500 dark:text-slate-400 mt-1">{label}</p>
               </div>
             ))}
           </div>
@@ -75,8 +75,8 @@ export default function Home() {
       </section>
 
       {/* Vision */}
-      <section className="py-16 border-t border-slate-200">
-        <h2 className="text-2xl font-bold text-slate-900 mb-8">What this becomes</h2>
+      <section className="py-16 border-t border-slate-200 dark:border-slate-800">
+        <h2 className="text-2xl font-bold text-slate-900 dark:text-slate-100 mb-8">What this becomes</h2>
         <div className="grid sm:grid-cols-3 gap-6">
           {[
             {
@@ -92,25 +92,25 @@ export default function Home() {
               body: "Housing costs, commute times, satisfaction scores, job search timelines — the things that matter to your daily life, measured.",
             },
           ].map(({ title, body }) => (
-            <div key={title} className="rounded-xl border border-slate-200 bg-white p-5">
-              <h3 className="font-semibold text-slate-900 mb-2">{title}</h3>
-              <p className="text-sm text-slate-600 leading-relaxed">{body}</p>
+            <div key={title} className="rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 p-5">
+              <h3 className="font-semibold text-slate-900 dark:text-slate-100 mb-2">{title}</h3>
+              <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">{body}</p>
             </div>
           ))}
         </div>
       </section>
 
       {/* About */}
-      <section className="py-16 border-t border-slate-200">
+      <section className="py-16 border-t border-slate-200 dark:border-slate-800">
         <div className="max-w-2xl">
-          <h2 className="text-2xl font-bold text-slate-900 mb-4">About</h2>
-          <p className="text-slate-600 leading-relaxed mb-4">
+          <h2 className="text-2xl font-bold text-slate-900 dark:text-slate-100 mb-4">About</h2>
+          <p className="text-slate-600 dark:text-slate-400 leading-relaxed mb-4">
             Forin is an independent project built by a foreign resident in Tokyo.
             It started as a side project to answer the questions I couldn&apos;t find
             reliable answers to when I first arrived — and grew into something I
             thought other people might find useful.
           </p>
-          <p className="text-slate-600 leading-relaxed">
+          <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
             The platform is early. The survey has a handful of responses. The data
             visualizations are basic. But the goal is to build something rigorous
             enough that researchers, HR professionals, and policymakers eventually
@@ -121,7 +121,7 @@ export default function Home() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 border-t border-slate-200">
+      <section className="py-16 border-t border-slate-200 dark:border-slate-800">
         <div className="rounded-2xl bg-slate-900 text-white p-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
           <div>
             <h2 className="text-xl font-bold mb-2">Help build the dataset</h2>
