@@ -37,13 +37,17 @@ export async function POST(req: NextRequest) {
   }
 }
 
-// Also support GET for easy manual triggering via browser (still requires secret as query param)
+// Also support GET for Vercel cron (sends Authorization header) and manual browser triggers (?secret=)
 export async function GET(req: NextRequest) {
-  const { searchParams } = new URL(req.url);
   const secret = process.env.SYNC_SECRET;
-  const token = searchParams.get("secret");
+  const authHeader = req.headers.get("authorization");
+  const { searchParams } = new URL(req.url);
+  const queryToken = searchParams.get("secret");
 
-  if (!secret || token !== secret) {
+  const validHeader = secret && authHeader === `Bearer ${secret}`;
+  const validQuery = secret && queryToken === secret;
+
+  if (!validHeader && !validQuery) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   }
 
